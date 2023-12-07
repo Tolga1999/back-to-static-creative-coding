@@ -16,6 +16,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "gsap": "^3.12.3"
+    "gsap": "^3.12.3",
+    "split-type": "^0.3.4"
   }
 }
