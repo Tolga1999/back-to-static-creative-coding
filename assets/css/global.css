@@ -1,40 +1,42 @@
-/* mystic font */
-@font-face {
-    font-family: 'mystic';
-    src: url('../fonts/EnchantedLand.ttf');
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap');
+
+:root {
+    /* Main Colors */
+    --c-pink: rgb(227, 0, 89);
+
+    /* Text */
+    --c-white: rgb(255, 255, 255);
+
+    /* body */
+    --c-background: rgb(30, 30, 30);
+
+    /* Containers */
+    --c-container: rgb(44, 44, 44);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 body{
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    font-family: 'mystic', Arial, sans-serif;
+    background-color: var(--c-background);
+    color: var(--c-white);
 }
 
-/* section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-} */
-
-h1{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    font-size: clamp(2em, 25vw, 20em); /* for resizing text */
-    color: white;
-    margin: 0;
-    letter-spacing: 10px;
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
 }
 
-.cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 12rem;
-    height: 12rem;
-    pointer-events: none;
-    background-color: red;
-  }
+section {
+    /* display: flex;
+    align-items: center; */
+    background-color: var(--c-container);
+    padding: 2em;
+    border-top: 12px solid var(--c-pink);
+    margin: 1em 1em;
+    border-radius: 0.5em;
+}
