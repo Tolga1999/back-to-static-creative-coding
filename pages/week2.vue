@@ -16,18 +16,16 @@ const { data, error } = await useGraphqlQuery({ query: QUERY });
 console.log(data)
 
 onMounted(() => {
-    const images = document.querySelectorAll('article');
-    console.log(images);
+    const articles = document.querySelectorAll('article');
 
-    images.forEach(image => {
+    articles.forEach(article => {
         // get width and height item
-        const height = image.clientHeight;
-        const width = image.clientWidth;
+        const height = article.clientHeight;
+        const width = article.clientWidth;
 
-        image.addEventListener('mousemove', (e) => {
+        article.addEventListener('mousemove', (e) => {
             let xValue = e.clientX;
             let yValue = e.clientY;
-
 
             // LOOK AT THIS ONE MORE TIME!
 
@@ -39,11 +37,11 @@ onMounted(() => {
             const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
 
             /* Apply the calculated transformation */
-            image.style.transform = string
+            article.style.transform = string
         })
 
-        image.addEventListener('mouseout', () => {
-            image.style.transform = 'perspective(500px) rotateX(0) rotateY(0)'
+        article.addEventListener('mouseout', () => {
+            article.style.transform = 'perspective(500px) rotateX(0) rotateY(0)'
         })
     });
 })
