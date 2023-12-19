@@ -10,6 +10,9 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../assets/img/snow03.gif');
+    background-repeat: repeat;
+    background-size: contain;
 }
 .circle{
     background-color: red;
@@ -17,5 +20,7 @@ main{
     height: 25em;
     border-radius: 50%;
     /* clip-path: circle(50% at 50% 50%); */
+    background-image: url('../assets/img/christmas.svg');
+    /* mix-blend-mode: overlay; */
 }
 </style>
